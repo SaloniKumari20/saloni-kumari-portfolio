@@ -1,66 +1,172 @@
-// src/components/Skills/Skills.jsx
+// // src/components/Skills/Skills.jsx
+// import React from "react";
+// import { SkillsInfo } from "../../constants";
+// import Tilt from "react-parallax-tilt";
+
+// const Skills = () => (
+//   <section
+//     id="skills"
+//     className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans bg-skills-gradient clip-path-custom"
+//   >
+//     {/* Section Title */}
+//     <div className="text-center mb-8">
+//       <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
+//       <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
+//       <p className="text-gray-400 mt-4 text-lg font-semibold">
+//       <p>
+//        My technical skills include HTML, CSS, JavaScript, React.js, and Tailwind CSS, along with programming knowledge of Java, Python, and C. I have worked with MySQL and built real-world web applications through projects.
+//      </p>
+//       </p>
+//     </div>
+
+//     {/* Skill Categories */}
+//     <div className="flex flex-wrap gap-1 lg:gap-5 py-10 justify-between">
+//       {SkillsInfo.map((category) => (
+//         <div
+//           key={category.title}
+//           className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white 
+//           shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"
+//         >
+//           <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center">
+//             {category.title}
+//           </h3>
+
+//           {/* Skill Items - 3 per row on larger screens */}
+//           <Tilt
+//             key={category.title}
+//             tiltMaxAngleX={20}
+//             tiltMaxAngleY={20}
+//             perspective={1000}
+//             scale={1.05}
+//             transitionSpeed={1000}
+//             gyroscope={true}
+//           >
+//             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
+//               {category.skills.map((skill) => (
+//                 <div
+//                   key={skill.name}
+//                   className="flex items-center justify-center space-x-2 bg-transparent border-2 border-gray-700 rounded-3xl py-2 px-2 sm:py-2 sm:px-2 text-center"
+//                 >
+//                   <img
+//                     src={skill.logo}
+//                     alt={`${skill.name} logo`}
+//                     className="w-6 h-6 sm:w-8 sm:h-8"
+//                   />
+//                   <span className="text-xs sm:text-sm text-gray-300">
+//                     {skill.name}
+//                   </span>
+//                 </div>
+//               ))}
+//             </div>
+//           </Tilt>
+//         </div>
+//       ))}
+//     </div>
+//   </section>
+// );
+
+// // export default Skills;
+// import { SkillsInfo } from "../../constants";
+// <div className="flex flex-wrap gap-6 py-10 justify-center">
+//   {SkillsInfo.map((category) => (
+//     <div
+//       key={category.title}
+//       className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white 
+//       shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"
+//     >
+//       <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center">
+//         {category.title}
+//       </h3>
+
+//       <Tilt
+//         tiltMaxAngleX={20}
+//         tiltMaxAngleY={20}
+//         perspective={1000}
+//         scale={1.05}
+//         transitionSpeed={1000}
+//         gyroscope={true}
+//       >
+//         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full">
+//           {category.skills.map((skill) => (
+//             <div
+//               key={skill.name}
+//               className="flex items-center gap-2 px-3 py-2 border-2 border-gray-700 rounded-3xl"
+//             >
+//               <img
+//                 src={skill.logo}
+//                 alt={`${skill.name} logo`}
+//                 className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
+//               />
+//               <span className="text-xs sm:text-sm text-gray-300 whitespace-nowrap">
+//                 {skill.name}
+//               </span>
+//             </div>
+//           ))}
+//         </div>
+//       </Tilt>
+//     </div>
+//   ))}
+// </div>
+
+// export default Skills;
+
 import React from "react";
 import { SkillsInfo } from "../../constants";
 import Tilt from "react-parallax-tilt";
 
-const Skills = () => (
-  <section
-    id="skills"
-    className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans bg-skills-gradient clip-path-custom"
-  >
-    {/* Section Title */}
-    <div className="text-center mb-8">
-      <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
-      <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
-      <p className="text-gray-400 mt-4 text-lg font-semibold">
-      A collection of my technical skills and expertise honed through various projects and experiences
-      </p>
-    </div>
+const Skills = () => {
+  return (
+    <section
+      id="skills"
+      className="pt-52 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans bg-skills-gradient"
+    >
+      {/* Title */}
+      <div className="text-center mb-10">
+        <h2 className="text-3xl sm:text-4xl font-bold text-white">
+          FRONTEND SKILLS
+        </h2>
+        <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
+        <p className="text-gray-400 mt-4 text-lg font-semibold">
+          Frontend Developer skilled in HTML, CSS, JavaScript, React.js, and Tailwind CSS.
+        </p>
+      </div>
 
-    {/* Skill Categories */}
-    <div className="flex flex-wrap gap-1 lg:gap-5 py-10 justify-between">
-      {SkillsInfo.map((category) => (
-        <div
-          key={category.title}
-          className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white 
-          shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"
-        >
-          <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center">
-            {category.title}
-          </h3>
-
-          {/* Skill Items - 3 per row on larger screens */}
-          <Tilt
+      {/* Skills */}
+      <div className="flex flex-wrap gap-6 py-10 justify-center">
+        {SkillsInfo.map((category) => (
+          <div
             key={category.title}
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={1000}
-            gyroscope={true}
+            className="bg-gray-900 px-6 sm:px-10 py-8 w-full sm:w-[48%] rounded-2xl border border-white 
+            shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"
           >
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
-              {category.skills.map((skill) => (
-                <div
-                  key={skill.name}
-                  className="flex items-center justify-center space-x-2 bg-transparent border-2 border-gray-700 rounded-3xl py-2 px-2 sm:py-2 sm:px-2 text-center"
-                >
-                  <img
-                    src={skill.logo}
-                    alt={`${skill.name} logo`}
-                    className="w-6 h-6 sm:w-8 sm:h-8"
-                  />
-                  <span className="text-xs sm:text-sm text-gray-300">
-                    {skill.name}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </Tilt>
-        </div>
-      ))}
-    </div>
-  </section>
-);
+            <h3 className="text-2xl font-semibold text-gray-400 mb-4 text-center">
+              {category.title}
+            </h3>
+
+            <Tilt tiltMaxAngleX={20} tiltMaxAngleY={20}>
+              <div className="flex flex-wrap justify-center gap-4">
+                {category.skills.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="flex flex-col items-center justify-center gap-2 px-3 py-4 w-[45%] min-h-[110px] border-2 border-gray-700 rounded-3xl bg-[#0f172a] text-center"
+                  >
+                    <img
+                      src={skill.logo}
+                      alt={skill.name}
+                      className="w-7 h-7 object-contain"
+                    />
+                    <span className="text-sm text-gray-300 leading-tight">
+                      {skill.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </Tilt>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Skills;
