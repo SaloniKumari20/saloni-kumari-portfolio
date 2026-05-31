@@ -111,4 +111,4 @@ export const education = [
     grade: "67.4%",
     desc: "Secondary (10th)",
   },
-];
+]; 

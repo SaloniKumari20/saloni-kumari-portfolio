@@ -24,7 +24,7 @@ const BlurBlob = ({ position, size }) => {
     </div>
   );
 };
-
+  
 // Define prop types
 BlurBlob.propTypes = {
   position: PropTypes.shape({
